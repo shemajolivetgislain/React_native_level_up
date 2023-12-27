@@ -5,10 +5,13 @@ import {
   TextInput,
   View,
   FlatList,
+  Image,
 } from "react-native";
 import { useState } from "react";
 import GoalItem from "./components/GoalItem/GoalItem";
 import GoalInput from "./components/Inputs/GoalInput";
+import Holder from "./components/Holder";
+
 
 export default function App() {
   const [goals, setGoals] = useState([]);
@@ -28,6 +31,8 @@ export default function App() {
 
   return (
     <View style={styles.container}>
+      {/* <Image source={require("/assets/images/a.PNG")} /> */}
+      <Holder />
       <GoalInput onAddGoal={listAddedGoals} />
       <View style={styles.goalsCon}>
         <Text>List Goals</Text>
